@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>禅心妈妈官网</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="bookmark" type="image/x-icon" href="images/logo.png"/>
+    <link rel="shortcut icon" href="images/logo.png">
+    <link rel="icon" href="images/logo.png">
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+    <style>
+    .container {
+        text-align: center;
+    }
+
+    .container img {
+        vertical-align: bottom;
+    }
+    .clear-img{
+      margin:0;padding:0;list-style-type:none;float:left;width:80%;
+      margin-left: 10%;
+    }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="yzcp.html">月子餐谱</a></li>
+            <li><a href="lsdz.html">量身定制</a></li>
+            <li><img width="80px" src="images/logo.png" alt="" id="logo1"></li>
+            <li><a href="jmhz.html">加盟合作</a></li>
+            <li><a href="qyxw.html">企业新闻</a></li>
+            <li><a class="act" href="lxwm.html">联系我们</a></li>
+            <li id="rukou">
+              <div id="denglu">
+                <a  class="login" id="login"><i class="fa fa-plus" aria-hidden="true" id="icon"></i></a>
+                <div id="hide_li">
+                  <a href="http://www.yuechanxin.com/cxmm/Login/agentLogin" style="display: table-cell;">渠道商后台</a>
+                  <a href="http://www.yuechanxin.com/cxmm" style="display: table-caption;text-align:left;">网站后台</a>
+                </div>
+              </div>
+          </li>
+        </ul>
+    </nav>
+    <div id="pingtai"style="border-radius: 20px;" >
+      <ul style="border-radius: 15px;">
+        <li ><a href="http://www.yuechanxin.com/cxmm/Login/agentLogin" style="border-radius: 20px;">渠道商后台</a></li>
+        <li><a href="http://www.yuechanxin.com/cxmm">网站后台</a></li>
+      </ul>
+    </div>
+    <div class="container">
+        <img class="clear-img" width="800px" style="margin-top:2em" src="images/lxwm.jpg" alt="">
+    </div>
+    <div style="clear:both"></div>
+     <footer>
+    <div class="footer-wp">
+         <div class="icon">
+            <img src="images/icon.png" alt="">
+        </div>
+        <div class="qrcode">
+        <div class="">
+            <div style="display:inline-block">
+                  <p>
+                扫描关注禅心妈妈微信公众号
+            </p>
+            <img height="70%;" src="images/qrcode.jpg" alt="">
+            </div>
+
+        </div>
+        </div>
+
+        <div class="message">
+            <p>客服电话：400-682-2257</p>
+                <p>联系地址：上海市静安区天目西路547号联通国际大厦C座501室</p>
+
+        </div>
+        <hr>
+    </div>
+
+    </footer>
+    <nav style="background:#fff;position:fixed;top:0;width:100%;z-index=99" id="fixed">
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="yzcp.html">月子餐谱</a></li>
+            <li><a href="lsdz.html">量身定制</a></li>
+            <li><img width="80px" src="images/logo.png" alt="" id="logo2"></li>
+            <li><a href="jmhz.html">加盟合作</a></li>
+            <li><a href="qyxw.html">企业新闻</a></li>
+            <li><a  class="act"  href="lxwm.html">联系我们</a></li>
+            <li id="rukou2">
+              <div id="denglu2">
+                <a  class="login" id="login2"><i class="fa fa-plus" aria-hidden="true" id="icon2"></i></a>
+                <div id="hide_li2">
+                  <a href="http://www.yuechanxin.com/cxmm/Login/agentLogin" style="display: table-cell;">渠道商后台</a>
+                  <a href="http://www.yuechanxin.com/cxmm" style="display: table-caption;text-align:left;">网站后台</a>
+                </div>
+              </div>
+          </li>
+        </ul>
+    </nav>
+    <script src="js/jquery-1.10.1.min.js"></script>
+</body>
+<script>
+$(function() {
+
+    $("#rukou").hover(function(){
+      $("#hide_li").show();
+      $("#icon").removeClass("fa-plus");
+      $("#icon").addClass("fa-minus");
+    },function(){
+      $("#hide_li").hide();
+      $("#icon").removeClass("fa-minus");
+       $("#icon").addClass("fa-plus");
+    });
+    $("#rukou2").hover(function(){
+    
+      $("#hide_li2").show();
+      $("#icon2").removeClass("fa-plus");
+      $("#icon2").addClass("fa-minus");
+    },function(){
+      $("#hide_li2").hide();
+      $("#icon2").removeClass("fa-minus");
+      $("#icon2").addClass("fa-plus");
+    });
+    $("#logo1").click(function(){
+      window.location.href="index.html";
+    });
+    $("#logo2").click(function(){
+      window.location.href="index.html";
+    });
+
+
+    var wh = $(window).height();
+    var h = $("nav").height() + $(".slider").height() + $(".link-group").height();
+    if (wh <= h) {
+        $("footer").css({
+            "position": "absolute",
+            "bottom": "0"
+        })
+    }
+    $("#fixed").hide();
+    $(window).scroll(function() {
+        if ($(window).scrollTop() > 0) {
+            $("#fixed").fadeIn();
+        }else{
+            $("#fixed").fadeOut();
+        }
+    })
+
+
+
+
+})
+</script>
+
+</html>
